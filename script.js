@@ -4,7 +4,8 @@
  */
 
 /* Global Variables */
-
+var trainer = false
+var count = 0
 
 /** 
  * main  
@@ -14,7 +15,12 @@
  */
 /* Main */
 function main(){
-
+var again = true
+while (again == true){
+trainer = confirm("Trainer MODE???");
+playNim()
+again = confirm("again?");
+}
 }
 
 /** 
@@ -24,7 +30,13 @@ function main(){
  * @return none
  */
 function playNim(){
-
+count = 0
+while(count < 21){
+userTurn()
+if (count > 20) alert("you lose!")
+    else cpuTurn()
+if (count > 20) alert("you win!")
+}
 }
 
 /** 
