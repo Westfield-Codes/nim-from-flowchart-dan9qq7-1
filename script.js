@@ -91,7 +91,7 @@ if(turnorder == false) alert("Cpu's Turn")
 if (count == 17) turn = 3;
 else if(count == 18) turn = 2
 else if(count > 18) turn = 1
-else if(trainer == true &! turn > 1) turn = 4 - count % 4
+else if(trainer == true && turn > 1) turn = 4 - count % 4
 else turn = Math.floor(Math.random()*3+1)
 count = count + turn;
 alert("i counted " + turn + " count is now " + count);
